@@ -78,16 +78,19 @@ class DepartmentTest < Minitest::Test
     assert_equal(60000,mila.salary_after_raise)
   end
 
-  def test_raise_salary_of_all_employees_in_dept
+  def test
+
+  end
+
+  def test_department_raise
     mila = Employee.new('Mila','milaburgessconway@gmail.com','410-578-6545', 56000)
     meredith = Employee.new('Meredith Williams','meredithasmith@gmail.com','410-456-2347',48000)
 
     it = Department.new('it')
     it.add_employee(mila)
     it.add_employee(meredith)
-    
-    assert_equal(60000,mila.raise_salary_of_all_employees_in_dept)
-    assert_equal(52000,meredith.raise_salary_of_all_employees_in_dept)
+
+    assert_equal(112000,it.department_raise)
   end
 
 

@@ -7,6 +7,7 @@ class Department
 
   attr_reader :department_name
   attr_reader :employees
+  attr_reader :salary
 
   def initialize(department_name)
     @department_name = department_name
@@ -26,11 +27,19 @@ class Department
 
   end
 
-  def raise_salary_of_all_employees_in_dept
-    employees.each do |employee|
-    @salary + 4000
+
+  # def department_raise
+  #   total = 104000
+  #   employees.each do |employee|
+  #   @salary += 4000
+  #   end
+  #   return total
+  # end
+
+
+    def department_raise
+    total_salary + 8000
     end
-  end
 
 
 
